@@ -88,6 +88,8 @@ def upsert_customers(db: Session, customers: list[dict]) -> int:
             "created_at": stmt.excluded.created_at,
         },
     )
+    
+    print("Working Sucessfully")
 
     db.execute(stmt)
     db.commit()
